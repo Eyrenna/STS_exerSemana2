@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AgendaService {
 
-	private static Map<String, Persona> bbdd = new LinkedHashMap<>();
+	private Map<String, Persona> bbdd = new LinkedHashMap<>();
 	
 	@PostConstruct
 	public void init() {
@@ -27,7 +27,8 @@ public class AgendaService {
 		return bbdd.get(id);
 	}
 	
-	public static int nombreContactes() {
+	public int nombreContactes() {
 		return bbdd.size();
 	}
+	
 }
